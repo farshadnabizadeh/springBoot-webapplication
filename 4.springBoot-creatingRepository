@@ -1,0 +1,18 @@
+right Click on package that has .repository in /src/main/java and do following steps :
+
+	* Select New 
+	* Select Interface 
+	* right Interface name in Name Section (StudentRepository.java)
+	* Open StudentRepository.java in /src/main/java/net.studentManagementSystem.sms.repository
+	* put following codes into there :
+	
+		package net.studentManagementSystem.sms.repository;
+		import org.springframework.data.jpa.repository.JpaRepository;
+		import net.studentManagementSystem.sms.entity.Student;
+		
+		// JpaRepository get 2 arguments
+		// first Argument is Entity Student
+		// second Argument is Type of primaryKey
+		public interface StudentRepository extends JpaRepository<Student,Long> {
+
+		}
